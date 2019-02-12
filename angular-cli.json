@@ -1,0 +1,7 @@
+{
+  "paths": {
+    "LZUTF8": [
+      "node_modules/lzutf8/build/production/lzutf8.min.js"
+    ]
+  }
+}

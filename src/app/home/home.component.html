@@ -1,0 +1,26 @@
+
+<div class="container text-center" *ngIf="isLoading">
+  <img style="margin-top:25%; margin-bottom: 8px; height: 100px;" class="pulsate-bck" src="https://honest.cash/img/honest-logo-2.png">
+  <br/>
+  Loading from<br/>
+  <strong>Bitcoin Cash</strong>
+</div>
+
+<div class="hc-container container" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div *ngIf="err" class="text-center alert">
+        File does not exist or it could not connect to the Bitcoin Cash blockchain.
+      </div>
+
+      <h1 id="title">{{post.title}}</h1>
+      <p>{{post.bchfile}}</p>
+      <article class="post-body" [innerHTML]="post.body">
+      </article>
+
+      <a href="https://honest.cash" class="btn btn-block btn-light">Read more on Honest.Cash</a>
+    </div>
+  </div>
+  
+</div>
